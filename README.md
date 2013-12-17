@@ -3,6 +3,8 @@ qrcode2scad
 
 Input a string to get a printable qrcode
 
+Inspiration : http://imgur.com/a/vZEj7 by [aNt-e](http://www.reddit.com/r/3Dprinting/comments/1sys1z/combined_my_two_favorite_things/)
+
 # Requirement
 
 * Ruby
