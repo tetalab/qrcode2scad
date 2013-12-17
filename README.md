@@ -22,4 +22,6 @@ bundle install
 cd qrcode2scad
 ruby qrcode2scad.rb "Hello World"
 ```
-*qrcode2.scad* and *qrcode.scad* are created, they can be used in OpenSCAD and OpenJScad.
+*qrcode2.scad* and *qrcode.scad* are created, they can be used in OpenSCAD and OpenJScad to create a STL file, then use your favorite STL to gcode tool, and print it.
+
+Process in OpenSCAD can be long, it took 17 minute to compile *qrcode.scad* file on a laptop.
