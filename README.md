@@ -22,3 +22,4 @@ bundle install
 cd qrcode2scad
 ruby qrcode2scad.rb "Hello World"
 ```
+*qrcode2.scad* and *qrcode.scad* are created, they can be used in OpenSCAD and OpenJScad.
