@@ -12,8 +12,8 @@ def extrusionArray(qr, type)
     33.times do |row|
       if qr.dark?(column, row)
         extrusion << case type
-          when 'jscad' then "    translate([3, #{column+2}, #{row+2}], cube({size: [2, 1.01, 1.01]}))"
-          when 'scad'  then "  translate([3, #{column+2}, #{row+2}]) cube(size = [2, 1.01, 1.01]);"
+          when 'jscad' then "    translate([6, #{column*2+2}, #{row*2+2}], cube({size: [4, 2.01, 2.01]}))"
+          when 'scad'  then "  translate([6, #{column*2+2}, #{row*2+2}]) cube(size = [4, 2.01, 2.01]);"
         end
       end
     end
@@ -26,7 +26,7 @@ def generateScadFile(extrusion)
 
   File.open("qrcode.scad", "w") do |f|
     f.puts "difference() {"
-    f.puts "  cube(size = [4, 37, 37]);"
+    f.puts "  cube(size = [8, 74, 74]);"
     f.puts extrusion.join("\n")
     f.puts "};"
   end
@@ -38,7 +38,7 @@ def generateJscadFile(extrusion)
   File.open("qrcode.jscad", "w") do |f|
     f.puts "function main() {"
     f.puts "  return difference("
-    f.puts "    cube({size: [4, 37, 37]}),"
+    f.puts "    cube({size: [8, 74, 74]}),"
     f.puts extrusion.join(",\n")
     f.puts "  );"
     f.puts "}"
